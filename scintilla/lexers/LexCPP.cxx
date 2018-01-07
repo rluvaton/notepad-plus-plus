@@ -71,7 +71,7 @@ bool followsReturnKeyword(StyleContext &sc, LexAccessor &styler) {
 	int lineStartPos = styler.LineStart(currentLine);
 	while (--pos > lineStartPos) {
 		char ch = styler.SafeGetCharAt(pos);
-		if (ch != ' ' && ch != '\t') {
+		if (!IsSpaceOrTab((int)ch) {
 			break;
 		}
 	}
